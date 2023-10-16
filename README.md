@@ -12,7 +12,7 @@ See all binary (executable) targets with:
 
 `bazelisk query 'kind(binary, ...)'`
 
-Run any of those targets with: `bazel run <target label>`
+Run any of those targets with: `bazelisk run <target label>`
 
 For example:
 
