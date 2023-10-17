@@ -1,11 +1,12 @@
+load("//examples/hello/python:dynamic.bzl", "dynamic_friend_provider")
+
 py_binary(
     name = "hello-world",
-    srcs = ["hello.py"],
+    srcs = ["hello.py", ":school",],
     main = "hello.py",
     deps = [
         ":friends",
         ":work_friends",
-        ":school_friends",
     ]
 )
 
@@ -20,8 +21,12 @@ py_library(
     deps = [":friends"],
 )
 
-py_library(
-    name = "school_friends",
-    srcs = ["school_friend_provider.py"],
-    deps = [":friends"],
+dynamic_friend_provider(
+    name = "school",
+    friends = [
+        "Alice",
+        "Bob",
+        "Chester",
+        "Sherry",
+    ]
 )
