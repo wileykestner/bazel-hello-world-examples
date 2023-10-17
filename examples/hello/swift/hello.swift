@@ -6,5 +6,6 @@ struct App {
         for name in Names.getNames() {
            print("hello \(name)")
         }
+        GeneratedCode().main()
     }
 }
