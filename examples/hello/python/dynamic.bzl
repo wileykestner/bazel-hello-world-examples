@@ -1,6 +1,5 @@
 def friend_provider_impl(ctx):
     python_source_file_output = ctx.actions.declare_file("{}_friend_provider.py".format(ctx.attr.name))
-    print("template: {}".format(ctx.file._template.path))
     ctx.actions.expand_template(
         output = python_source_file_output,
         template = ctx.file._template,
