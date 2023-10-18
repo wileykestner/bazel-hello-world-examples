@@ -3,3 +3,5 @@ common --enable_bzlmod
 build --host_macos_minimum_os=13.5
 build --macos_minimum_os=13.5
 build --apple_platform_type=macos
+
+query --noimplicit_deps

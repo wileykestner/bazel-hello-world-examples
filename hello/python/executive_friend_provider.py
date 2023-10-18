@@ -1,7 +1,7 @@
 from typing import Sequence
-from examples.hello.python.friend_provider import FriendProvider
+from hello.python.friend_provider import FriendProvider
 
-class WorkFriendProvider(FriendProvider):
+class ExecutiveFriendProvider(FriendProvider):
 
     def get_friends(self) -> Sequence[str]:
         return [

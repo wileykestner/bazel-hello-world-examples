@@ -1,7 +1,7 @@
 from typing import Sequence
-from examples.hello.python.friend_provider import FriendProvider
-from examples.hello.python.school_friend_provider import SchoolFriendProvider
-from examples.hello.python.work_friend_provider import WorkFriendProvider
+from hello.python.friend_provider import FriendProvider
+from hello.python.mobile_friend_provider import MobileFriendProvider
+from hello.python.executive_friend_provider import ExecutiveFriendProvider
 
 class Hello(object):
     def __init__(self, friend_providers: Sequence[FriendProvider]) -> None:
@@ -17,8 +17,8 @@ class Hello(object):
 
 if __name__ == "__main__":
     all_friend_providers = [
-        SchoolFriendProvider(),
-        WorkFriendProvider(),
+        MobileFriendProvider(),
+        ExecutiveFriendProvider(),
     ]
     
     hello = Hello(friend_providers=all_friend_providers)

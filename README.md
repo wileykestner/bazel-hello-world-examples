@@ -16,4 +16,4 @@ Run any of those targets with: `bazelisk run <target label>`
 
 For example:
 
-`bazelisk run //examples/hello/c:hello-world`
+`bazelisk run //hello/c:hello-world`
