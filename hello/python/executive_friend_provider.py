@@ -5,7 +5,7 @@ class ExecutiveFriendProvider(FriendProvider):
 
     def get_friends(self) -> Sequence[str]:
         return [
-            "Aly",
-            "Cal",
-            "Lidiane",
+            "Denise",
+            "Noah",
+            "Parker",
         ]

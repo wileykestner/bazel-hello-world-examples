@@ -7,21 +7,17 @@ class TestExecutiveFriendProvider(unittest.TestCase):
         self._subject = ExecutiveFriendProvider()
         return super().setUp()
 
-    def test_stewart_is_executive_friend(self):
+    def test_denise_is_executive_friend(self):
         excutive_friends = self._subject.get_friends()
-        self.assertTrue("Stewart" in excutive_friends)
+        self.assertTrue("Denise" in excutive_friends)
 
-    def test_aly_is_executive_friend(self): 
+    def test_noah_is_executive_friend(self): 
         excutive_friends = self._subject.get_friends()
-        self.assertTrue("Aly" in excutive_friends)
+        self.assertTrue("Noah" in excutive_friends)
     
-    def test_cal_is_executive_friend(self): 
+    def test_patrick_is_executive_friend(self): 
         excutive_friends = self._subject.get_friends()
-        self.assertTrue("Cal" in excutive_friends)
+        self.assertTrue("Parker" in excutive_friends)
     
-    def test_lidiane_is_executive_friend(self): 
-        excutive_friends = self._subject.get_friends()
-        self.assertTrue("Lidiane" in excutive_friends)
-
 if __name__ == "__main__":
     unittest.main()
