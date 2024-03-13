@@ -1,3 +1,3 @@
 public func getNames() -> [String] {
-    return ["andres", "erik", "matt", "wiley"]
+    return ["andrés", "erik", "matt", "wiley"]
 }
