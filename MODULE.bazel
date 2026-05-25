@@ -1,10 +1,28 @@
 module(name = "bazel-101", version = "0.1")
 
+# BEGIN: Needed for Kotlin development
+bazel_dep(name = "rules_kotlin", version = "2.3.20")
+# <END>: Needed for Kotlin development
+
+# BEGIN: Needed for Python development
+bazel_dep(name = "rules_python", version = "1.9.1")
+
+python = use_extension("@rules_python//python/extensions:python.bzl", "python")
+python.toolchain(
+    python_version = "3.13",
+)
+
+pip = use_extension("@rules_python//python/extensions:pip.bzl", "pip")
+pip.parse(
+    hub_name = "pypi",
+    python_version = "3.13",
+    requirements_lock = "//:requirements_lock.txt",
+)
+
+use_repo(pip, "pypi")
+# <END>: Needed for Python development
+
 # BEGIN: Needed for Swift development
 bazel_dep(name = "rules_swift", version = "3.6.1", repo_name = "build_bazel_rules_swift")
 # <END>: Needed for Swift development
-
-# BEGIN: Needed for kotlin development
-bazel_dep(name = "rules_kotlin", version = "2.3.20")
-# <END>: Needed for kotlin development
 
